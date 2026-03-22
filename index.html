@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nilax — Systems &amp; Backend Engineer</title>
+  <meta name="description" content="Portfolio of Nilax — Systems & Backend Engineer. Building reliable systems that remain stable under load, failure, and real-world constraints." />
+  <meta name="theme-color" content="#0a0e1a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="loader-ring"></div>
+      <span class="loader-text">Initializing</span>
+    </div>
+  </div>
+
+  <!-- Background canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav id="main-nav" class="nav">
+    <a href="#hero" class="nav-logo">N</a>
+    <div class="nav-links">
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+      <a href="#certifications" class="nav-link" data-section="certifications">Certifications</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      <button id="nav-resume-btn" class="nav-resume-btn">View Resume</button>
+    </div>
+    
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-content">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#certifications" class="mobile-link">Certifications</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <button id="mobile-resume-btn" class="mobile-resume-link">View Resume</button>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <div class="hero-scroll-buffer">
+    <section class="hero-section" id="hero">
+      <canvas id="hero-canvas"></canvas>
+      <div class="hero-content">
+        <h1 class="hero-name" id="hero-name">Nilax</h1>
+        <p class="hero-title" id="hero-title">Systems &amp; Backend Engineer</p>
+        <p class="hero-tagline" id="hero-tagline">I build reliable systems that remain stable under load, failure, and real-world constraints.</p>
+        <div class="hero-ctas">
+          <button id="hero-resume-btn" class="btn-primary">View Resume</button>
+          <a href="#projects" class="btn-secondary">View Projects</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="section-container">
+        <h2 class="section-title">About</h2>
+        <div class="about-content">
+          <div class="about-text" id="about-text">
+            <p class="reveal-line">I'm a Computer Science student focused on backend systems, infrastructure, and reliable application design.</p>
+            <p class="reveal-line">I've built full-stack applications, automation systems, and real-time platforms with an emphasis on performance, correctness, and scalability.</p>
+            <p class="reveal-line">I approach problems from a systems perspective — thinking in terms of failure modes, state management, and long-term behavior rather than just immediate functionality.</p>
+          </div>
+          <div class="about-image-container">
+            <div class="about-image">
+               <img src="photo.jpeg" alt="Nilax" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+      <div class="section-container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="section-container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section certifications-section">
+      <div class="section-container">
+        <h2 class="section-title">Certifications</h2>
+        <div class="certifications-grid" id="certifications-grid"></div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="section-container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-content" id="contact-info"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Nilax. Built with precision.</p>
+  </footer>
+
+  <!-- Resume Viewer Modal -->
+  <div id="resume-modal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-info">
+          <h3 class="modal-title">Resume_Nilax.pdf</h3>
+          <span class="modal-meta">PDF • 125 KB</span>
+        </div>
+        <div class="modal-actions">
+          <a href="/resume.pdf" download class="modal-download-btn">Download PDF</a>
+          <button class="modal-close-btn">&times;</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <iframe src="/resume.pdf#toolbar=0" class="resume-iframe"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
