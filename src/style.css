@@ -1110,6 +1110,7 @@ a:hover {
   transition: all var(--transition-fast);
   text-decoration: none;
   width: fit-content;
+  margin-top: var(--space-md);
 }
 
 .resume-btn:hover {
