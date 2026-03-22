@@ -22,7 +22,7 @@ export function initContact() {
             <span class="contact-value">nilax-kundu</span>
           </a>
         </div>
-        <a href="/resume.pdf" download class="resume-btn" id="resume-download">
+        <a href="resume.pdf" download class="resume-btn" id="resume-download">
           ↓ Download Resume
         </a>
       </div>
