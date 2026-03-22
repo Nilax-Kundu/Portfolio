@@ -14,10 +14,26 @@ export function initResumeViewer() {
     document.getElementById('resume-download') // From contact section
   ];
 
+  const meta = document.getElementById('resume-meta');
+  
+  async function updateFileSize() {
+    try {
+      const response = await fetch('resume.pdf', { method: 'HEAD' });
+      const size = response.headers.get('content-length');
+      if (size && meta) {
+        const kb = (size / 1024).toFixed(0);
+        meta.textContent = `PDF • ${kb} KB`;
+      }
+    } catch (err) {
+      console.warn('Could not fetch real file size:', err);
+    }
+  }
+
   function openModal(e) {
     if (e) e.preventDefault();
     modal.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Prevent scroll
+    document.body.style.overflow = 'hidden';
+    updateFileSize();
   }
 
   function closeModal() {
