@@ -809,6 +809,25 @@ a:hover {
 .project-card.expanded .project-details {
   max-height: 400px;
   padding-top: var(--space-sm);
+  overflow-y: auto;
+}
+
+/* Scrollbar for project details */
+.project-details::-webkit-scrollbar {
+  width: 4px;
+}
+
+.project-details::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.project-details::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 10px;
+}
+
+.project-details::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
 }
 
 .project-details-inner {
